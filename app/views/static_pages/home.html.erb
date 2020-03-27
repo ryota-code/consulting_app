@@ -1,3 +1,20 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="post_form">
+        <%= render 'shared/post_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Post Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
 <!--ここからswiper-->
 <div class="wrapper">
   <div class="swiper-container top-carousel">
@@ -22,7 +39,7 @@
 
 <div class="row post__wrapper">
   <div class="col-md-8 popular">
-    <h3>人気</h3>
+    <h3 class="header__orange">人気</h3>
     <a class="popular-post" href="#">
       <%= image_tag 'colorfull.jpg', alt: 'sample', class: "post__thambnail" %>
       <div class="post__text">
@@ -49,8 +66,10 @@
     </a>
   </div>
   <div class="col-md-4 related">
-    <h3>新着</h3>
+    <h3 class="header__orange">新着</h3>
     <a class="related-post">
     </a>
   </div>
 </div>
+
+<% end %>
