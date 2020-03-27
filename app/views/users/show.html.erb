@@ -1,11 +1,31 @@
-<%= @user.name %>, <%= @user.email %>
-
-  <div class="col-md-8">
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
+<div class="row">
+  <div class="col-md-10">
+    <div class="profile__wrapper">
+      <div class="profile__img">
+        
+      </div>
+      <div class="profile__detail__wrapper">
+        <div class="profile__detail__up">
+          <div class="profile__name">
+            <h1>かめの甲羅</h1>
+          </div>
+          <div class="profile__follow">
+            <p class="profile__following">フォロー10</p>
+            <p class="profile__follower">フォロワー100</p>
+          </div>
+        </div>
+        <div class="profile__detail__down">
+          <p>かめの甲羅です。 仕事は、アフィリエイトとワードプレス講師です。 Youtubeもやっています。 Youtubeチャンネルは「かめの甲羅」です。 よろしくお願いします。</p>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+<div class="col-md-8">
+  <% if @user.posts.any? %>
+    <h3>Posts (<%= @user.posts.count %>)</h3>
+    <ol class="posts">
+      <%= render @posts %>
+    </ol>
+  <% end %>
+</div>
