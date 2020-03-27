@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "投稿されました"
-      redirect_to users_path
+      redirect_to root_path
     else
       @feed_items = []
       render 'static_pages/home'
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   private
     
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :thumbnail)
     end
     
     def correct_user
