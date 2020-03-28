@@ -10,8 +10,16 @@
             <h1>かめの甲羅</h1>
           </div>
           <div class="profile__follow">
-            <p class="profile__following">フォロー10</p>
-            <p class="profile__follower">フォロワー100</p>
+            <% @user ||= current_user %>
+            <a href="<%= following_user_path(@user) %>">
+              <p class="profile__following">フォロー<%= @user.following.count %>人</p>
+            </a>
+            <a href="<%= followers_user_path(@user) %>">
+              <p class="profile__follower">フォロワー<%= @user.followers.count %>人</p>
+            </a>
+            <div>
+              <%= render 'follow_form' if logged_in? %>
+            </div>
           </div>
         </div>
         <div class="profile__detail__down">

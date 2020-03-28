@@ -1,75 +1,22 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
+    <div class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
       <section class="post_form">
         <%= render 'shared/post_form' %>
       </section>
-    </aside>
+    </div>
     <div class="col-md-8">
       <h3>Post Feed</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
+  <%= render 'pickup_post' %>
 <% else %>
 
-<!--ここからswiper-->
-<div class="wrapper">
-  <div class="swiper-container top-carousel">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <%= image_tag 'colorfull.jpg', alt: 'sample' %>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'redblock.jpg', alt: 'sample' %>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'colorfull.jpg', alt: 'sample' %>
-      </div>
-      
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</div>
-
-
-<div class="row post__wrapper">
-  <div class="col-md-8 popular">
-    <h3 class="header__orange">人気</h3>
-    <a class="popular-post" href="#">
-      <%= image_tag 'colorfull.jpg', alt: 'sample', class: "post__thambnail" %>
-      <div class="post__text">
-        <h2>ブログ方アフィリエイトの完全講義</h2>
-        <p>こんにちは、マナブです。ブログ歴は６年。ブログ収益は月600万。個人ブログのアクセスは「月間で170万回」です。</p>
-        <div class="post__detail">
-          <div class="post__price">¥14800</div>
-          <div class="post__evaluation"></div>
-          <div class="post__comment">37件</div>
-        </div>
-        <div class="post__footer">
-          <div class="post__footer__left">
-            <%= image_tag 'colorfull.jpg', alt: 'sample', width: '50px', height: '50px'%>
-            <div class="user__info">
-              <div class="divuser__info__name">マナブ</div>
-              <div class="user__info__date">2日前</div>
-            </div>
-          </div>
-          <div class="post__footer__right">
-            <div class="post__category">ブログ・メディア運営</div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col-md-4 related">
-    <h3 class="header__orange">新着</h3>
-    <a class="related-post">
-    </a>
-  </div>
-</div>
+<%= render 'swiper' %>
+<%= render 'pickup_post' %>
 
 <% end %>
