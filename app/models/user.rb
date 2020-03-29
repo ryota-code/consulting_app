@@ -42,8 +42,9 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
   
+  # どのIDの投稿情報を取得するか
   def feed
-    Post.where("user_id = ?", id)
+    Post.where("user_id >= ?", 1)
   end
   
   # ユーザーをフォローする
