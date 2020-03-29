@@ -8,15 +8,10 @@
         <%= render 'shared/post_form' %>
       </section>
     </div>
-    <div class="col-md-8">
-      <h3>Post Feed</h3>
-      <%= render 'shared/feed' %>
-    </div>
   </div>
-  <%= render 'pickup_post' %>
+  <%= render 'shared/feed' %>
 <% else %>
 
 <%= render 'swiper' %>
-<%= render 'pickup_post' %>
 
 <% end %>
