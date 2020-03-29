@@ -3,7 +3,8 @@ class Post < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   mount_uploader :thumbnail, ThumbnailUploader
   validates :user_id, presence: true
-  validates :content, presence: true, length: { maximum: 250 }
+  validates :title, presence: true, length: { maximum: 50 }
+  validates :content, presence: true, length: { maximum: 1000 }
   validate  :thumbnail_size
   
   private
