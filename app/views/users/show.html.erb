@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-10">
+  <div class="col-md-12">
     <div class="profile__wrapper">
       <div class="profile__img">
         <img src="<%= @user.image.url %>"></img>
@@ -29,11 +29,13 @@
     </div>
   </div>
 </div>
-<div class="col-md-8">
-  <% if @user.posts.any? %>
-    <h3>Posts (<%= @user.posts.count %>)</h3>
-    <ol class="posts">
-      <%= render @posts %>
-    </ol>
-  <% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <p class="published">公開したコンサル</p>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <% if @user.posts.any? %>
+        <%= render @posts %>
+    <% end %>
+  </div>
 </div>
