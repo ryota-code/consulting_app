@@ -11,6 +11,7 @@ gem 'jquery-rails'
 # サンプルユーザーを追加するgem
 gem 'faker',          '1.7.3'
 gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
 gem 'mini_magick', '4.7.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
