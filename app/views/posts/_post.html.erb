@@ -1,8 +1,8 @@
 
-    <a class="popular-post" href="#">
+    <a class="new__post" href="#">
       <%= image_tag post.thumbnail.url if post.thumbnail? %>
       <div class="post__text">
-        <h2><%= post.content %></h2>
+        <h2><%= post.title %></h2>
         <p><%= post.content %></p>
         <div class="post__detail">
           <div class="post__price">¥<%= post.price %></div>
@@ -11,9 +11,9 @@
         </div>
         <div class="post__footer">
           <div class="post__footer__left">
-            <img src="" width: "50" height: "50"></img>
+            <%= image_tag current_user.image.url, size: "50x50" %>
             <div class="user__info">
-              <div class="divuser__info__name"><%= link_to post.user.name, post.user %></div>
+              <div class="user__info__name"><%= link_to post.user.name, post.user %></div>
               <div class="user__info__date"><%= time_ago_in_words(post.created_at) %>前</div>
             </div>
           </div>

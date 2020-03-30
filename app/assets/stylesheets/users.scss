@@ -1,3 +1,45 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.profile__wrapper{
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 85px;
+  padding: 20px;
+}
+
+.profile__img{
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  img{
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+  }
+}
+
+.profile__detail__wrapper{
+  margin-left: 200px;
+}
+
+.profile__detail__up{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile__follow{
+  display: flex;
+  a{
+    color: #333333;
+  }
+}
+
+.profile__following{
+  margin-right: 20px;
+}
+
+.published{
+  border-radius: 4px;
+  
+}

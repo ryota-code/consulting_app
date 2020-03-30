@@ -11,36 +11,3 @@
  object-fit: cover;
 }
 
-/* post */
-.post__wrapper{
-  text-align: center;
-}
-
-.popular{
-  a{
-    text-decoration: none;
-    border: 1px solid gray;
-  }
-}
-
-.post__thambnail{
-  width: 100%;
-  border-radius: 8px 8px 0 0;
-  max-height: 400px;
-}
-
-.post__detail{
-  display: flex;
-  div{
-    margin-right: 10px;
-  }
-}
-
-.post__footer{
-  display: flex;
-  justify-content: space-between;
-}
-
-.post__footer__left{
-  display: flex;
-}
