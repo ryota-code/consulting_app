@@ -10,7 +10,7 @@ gem 'bootstrap-sass', ">= 3.4.1"
 gem 'jquery-rails'
 # サンプルユーザーを追加するgem
 gem 'faker',          '1.7.3'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'rmagick'
 gem "mini_magick", ">= 4.9.4"
 gem 'puma', '~> 3.11'
